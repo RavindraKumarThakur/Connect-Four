@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded',() => {
         [13, 20, 27, 34],
       ];
 
+      //checking for wins 
       function checkWinning(){
         for(let i = 0 ; i < winningArrays.length ; i++){
             if(
@@ -97,7 +98,9 @@ document.addEventListener('DOMContentLoaded',() => {
         }
       }
 
+      //Checking and add Players choices on the board.
     for(let i = 0;i < Squares.length;i++){
+        //can also use '.onclick' function instead of '.addEventListener'.
         Squares[i].addEventListener( 'click', () => {
             if(Squares[i + 7].classList.contains('taken') && !Squares[i].classList.contains('taken')){
                 if(currentPlayer == 1){
